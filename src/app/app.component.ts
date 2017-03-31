@@ -15,7 +15,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.mealService.getMeals().subscribe(result => {
-      this.meals = result;
+      let mealArray: Meal[] = [];
+      result.forEach(function(meal) {
+        let newMeal = new Meal(meal.name, meal.notes, meal.calories);
+        mealArray.push(newMeal);
+      });
+      this.meals = mealArray;
     });
   }
 
