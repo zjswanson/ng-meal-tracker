@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+button {
+  margin: 10px;
+}
+
+.inline {
+  display: inline;
+}
+
+.float-right {
+  float: right;
+}
+
+.sort {
+  margin-bottom: 15px;
+}
+
+.jumbotron {
+  text-align: center;
+}

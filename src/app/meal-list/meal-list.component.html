@@ -1,18 +1,22 @@
 <div class="well">
   <div class="sort">
-    <h4>Sort List by:</h4>
-    <select (change)="sortList($event.target.value)">
+    <h5 class="inline">Sort List by:</h5>
+    <select class="inline" (change)="sortList($event.target.value)">
       <option value='none'> All Foods </option>
        <option value="high"> High Calorie Foods </option>
        <option value="low"> Low Calorie Foods </option>
      </select>
+     <h5 class="float-right">click entry to edit</h5>
   </div>
-  <ul>
-    <li *ngFor="let meal of meals | calorieFilter:sortBy" (click)="sendMealToEdit(meal)">Meal: {{meal.name}}
-      <ul>
-        <li>Meal Notes: {{meal.notes}}</li>
-        <li>Calories: {{meal.calories}}</li>
-      </ul>
-    </li>
-  </ul>
+  <div *ngFor="let meal of meals | calorieFilter:sortBy" (click)="sendMealToEdit(meal)" class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="inline">{{meal.name}}</h4>
+      <h5 class="float-right">Calories: {{meal.calories}}</h5>
+    </div>
+    <div class="panel-body">
+      <p>
+        {{meal.notes}}
+      </p>
+    </div>
+  </div>
 </div>

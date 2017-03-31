@@ -3,13 +3,12 @@
   <h4>Number of Meals Today: {{mealCount}}</h4>
   <h4>Total Calorie Count: {{calorieCount}}</h4>
   <div class="edit" *ngIf="mealToEdit">
-    <h4>Edit Meal:</h4>
       <label>Edit Meal Name:</label>
-      <input [(ngModel)]="mealToEdit.name">
-      <label>Edit Notes:</label>
-      <input [(ngModel)]="mealToEdit.notes">
+      <input [(ngModel)]="mealToEdit.name" class="form-control">
       <label>Edit Calories:</label>
-      <input [(ngModel)]="mealToEdit.calories">
+      <input [(ngModel)]="mealToEdit.calories" class="form-control">
+      <label>Edit Notes:</label>
+      <textarea [(ngModel)]="mealToEdit.notes" class="form-control"></textarea>
       <button type="button" (click)="sendEdit()">Save Edits</button>
       <button type="button" (click)="cancelEdit()">Cancel</button>
   </div>
