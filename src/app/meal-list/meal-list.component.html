@@ -1,3 +1,11 @@
-<p>
-  meal-list works!
-</p>
+<div class="well">
+  <ul>
+    <li *ngFor="let meal of meals">Meal: {{meal.name}}
+      <ul>
+        <li>Meal Notes: {{meal.notes}}</li>
+        <li>Calories: {{meal.calories}}</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
