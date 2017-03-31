@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { mealService } from './mealService.service';
 import { MealListComponent } from './meal-list/meal-list.component';
 import { MealAddComponent } from './meal-add/meal-add.component';
-import { MealDashComponent } from './meal-dash/meal-dash.component'
+import { MealDashComponent } from './meal-dash/meal-dash.component';
+import { CalorieFilterPipe } from './calorie-filter.pipe'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     MealListComponent,
     MealAddComponent,
-    MealDashComponent
+    MealDashComponent,
+    CalorieFilterPipe
   ],
   imports: [
     BrowserModule,

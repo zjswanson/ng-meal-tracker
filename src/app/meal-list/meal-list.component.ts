@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Meal} from './../meal-model';
+import { CalorieFilterPipe } from './../calorie-filter.pipe'
 
 
 @Component({
@@ -9,6 +10,7 @@ import {Meal} from './../meal-model';
 })
 export class MealListComponent implements OnInit {
   @Input() meals: Meal[];
+  filterBy: string = null;
   constructor() { }
 
   ngOnInit() {

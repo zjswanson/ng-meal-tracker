@@ -16,10 +16,11 @@ export class AppComponent implements OnInit {
     this.mealService.getMeals().subscribe(result => {
       this.meals = result;
     });
-
   }
 
   addMeal(newMeal) {
     this.mealService.addMeal(newMeal);
   }
+
+
 }
