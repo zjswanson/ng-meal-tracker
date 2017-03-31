@@ -10,7 +10,7 @@ import { CalorieFilterPipe } from './../calorie-filter.pipe'
 })
 export class MealListComponent implements OnInit {
   @Input() meals: Meal[];
-  filterBy: string = null;
+  @Input() sortBy: string = null;
   @Output() sendEdit = new EventEmitter();
 
   constructor() { }
@@ -19,8 +19,11 @@ export class MealListComponent implements OnInit {
   }
 
   sendMealToEdit(meal: Meal) {
-    console.log(meal);
     this.sendEdit.emit(meal);
+  }
+
+  sortList(value:string) {
+    this.sortBy = value;
   }
 
 }

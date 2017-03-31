@@ -6,4 +6,5 @@
   <label>Total Calories:</label>
   <input #mealCalories>
   <button (click)="addMeal(mealName.value, mealNotes.value, mealCalories.value); mealName.value=''; mealNotes.value=''; mealCalories.value='';">Add Meal</button>
+  <button type="button" (click)="cancelEdit()">Cancel</button>
 </div>

@@ -4,8 +4,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <app-meal-dash [meals]="meals" [mealToEdit]="mealToEdit" (saveEdit)="saveEdit($event)"></app-meal-dash>
-      <app-meal-list [meals]="meals" (sendEdit)="openEdit($event)" ></app-meal-list>
+      <app-meal-dash [meals]="meals" [mealCount]="mealCount" [calorieCount]="calorieCount" [mealToEdit]="mealToEdit" (saveEdit)="saveEdit($event)" (sendSort)="sortList($event)"></app-meal-dash>
+      <app-meal-list [meals]="meals" [sortBy]="sortBy" (sendEdit)="openEdit($event)" ></app-meal-list>
     </div>
     <div class="col-sm-4">
       <app-meal-add (clickSender)="addMeal($event)"></app-meal-add>

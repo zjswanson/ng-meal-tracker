@@ -1,6 +1,14 @@
 <div class="well">
+  <div class="sort">
+    <h4>Sort List by:</h4>
+    <select (change)="sortList($event.target.value)">
+      <option value='none'> All Foods </option>
+       <option value="high"> High Calorie Foods </option>
+       <option value="low"> Low Calorie Foods </option>
+     </select>
+  </div>
   <ul>
-    <li *ngFor="let meal of meals | calorieFilter:filterBy" (click)="sendMealToEdit(meal)">Meal: {{meal.name}}
+    <li *ngFor="let meal of meals | calorieFilter:sortBy" (click)="sendMealToEdit(meal)">Meal: {{meal.name}}
       <ul>
         <li>Meal Notes: {{meal.notes}}</li>
         <li>Calories: {{meal.calories}}</li>

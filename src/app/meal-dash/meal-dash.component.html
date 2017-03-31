@@ -1,5 +1,7 @@
 <div class="well">
   <h2>Today's Meals</h2>
+  <h4>Number of Meals Today: {{mealCount}}</h4>
+  <h4>Total Calorie Count: {{calorieCount}}</h4>
   <div class="edit" *ngIf="mealToEdit">
     <h4>Edit Meal:</h4>
       <label>Edit Meal Name:</label>
@@ -9,5 +11,6 @@
       <label>Edit Calories:</label>
       <input [(ngModel)]="mealToEdit.calories">
       <button type="button" (click)="sendEdit()">Save Edits</button>
+      <button type="button" (click)="cancelEdit()">Cancel</button>
   </div>
 </div>

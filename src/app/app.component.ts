@@ -10,6 +10,9 @@ import { mealService } from './mealService.service'
 export class AppComponent implements OnInit {
   meals: Meal[] = [];
   mealToEdit: Meal = null;
+  sortBy: string = 'none';
+  mealCount: number;
+  calorieCount: number;
 
   constructor(private mealService: mealService) { }
 
@@ -17,12 +20,22 @@ export class AppComponent implements OnInit {
     this.mealService.getMeals().subscribe(result => {
       let mealArray: Meal[] = [];
       result.forEach(function(meal) {
-        let newMeal = new Meal(meal.name, meal.notes, meal.calories);
+        let newMeal = new Meal(meal.name, meal.notes, parseInt(meal.calories));
         newMeal.$key = meal.$key
         mealArray.push(newMeal);
       });
       this.meals = mealArray;
+      this.mealCount = mealArray.length;
+      this.calorieCount = this.countCalories();
     });
+  }
+
+  countCalories() {
+    let count: number = 0;
+    this.meals.forEach(function(meal) {
+      count += meal.calories
+    });
+    return count;
   }
 
   addMeal(newMeal) {
@@ -37,4 +50,9 @@ export class AppComponent implements OnInit {
     this.mealService.updateMeal(meal);
     this.mealToEdit = null;
   }
+
+  sortList(sortBy: string) {
+    this.sortBy = sortBy;
+  }
+
 }
