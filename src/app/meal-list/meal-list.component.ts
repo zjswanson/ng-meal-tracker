@@ -11,9 +11,15 @@ import { CalorieFilterPipe } from './../calorie-filter.pipe'
 export class MealListComponent implements OnInit {
   @Input() meals: Meal[];
   filterBy: string = null;
+  @Output() sendEdit = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sendMealToEdit(meal: Meal) {
+    this.sendEdit.emit(meal);
   }
 
 }

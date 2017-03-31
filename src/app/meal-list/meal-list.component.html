@@ -1,6 +1,6 @@
 <div class="well">
   <ul>
-    <li *ngFor="let meal of meals | calorieFilter:filterBy">Meal: {{meal.name}}
+    <li *ngFor="let meal of meals | calorieFilter:filterBy" (click)="sendMealToEdit(meal)">Meal: {{meal.name}}
       <ul>
         <li>Meal Notes: {{meal.notes}}</li>
         <li>Calories: {{meal.calories}}</li>

@@ -9,6 +9,7 @@ import { mealService } from './mealService.service'
 })
 export class AppComponent implements OnInit {
   meals: Meal[] = [];
+  mealToEdit: Meal = null;
 
   constructor(private mealService: mealService) { }
 
@@ -22,5 +23,7 @@ export class AppComponent implements OnInit {
     this.mealService.addMeal(newMeal);
   }
 
-
+  openEdit(meal: Meal) {
+    this.mealToEdit = meal;
+  }
 }
