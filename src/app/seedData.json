@@ -1,19 +1,19 @@
 {
-  "meals": [
-    {
-      "name": "Coffee",
-      "notes": "Probably like a quart of it.  A bunch",
-      "calories": 50
+  "meals" : {
+    "-Kg_tAGv7KmSJBeKeIBW" : {
+      "calories" : "200",
+      "name" : "Smoothie",
+      "notes" : "Chia seeds are supposed to be magic, right?"
     },
-    {
-      "name": "Larabar",
-      "notes": "Too small, too sweet.  Still Hungry",
-      "calories": 100
+    "-Kga1YnSsf88lhqBAHaw" : {
+      "calories" : "50",
+      "name" : "Coffee",
+      "notes" : "At least a quart of it.  With Cream."
     },
-    {
-      "name": "Breakfast Burrito",
-      "notes": "When you need to go right back to sleep after breakfast...",
-      "calories": 850
+    "-Kga2IMQyADl-Is3HGOY" : {
+      "calories" : "850",
+      "name" : "Burrito",
+      "notes" : "Carnitas is spanish for tiny cars.  It's a funny name for a burrito."
     }
-  ]
+  }
 }

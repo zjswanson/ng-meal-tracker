@@ -1,6 +1,39 @@
 # MealTracker
 
+MealTracker is an Angular 2 app built to demonstrate the basic concepts of assembling an app with Angular.  It uses a simple one-module structure with nested components, an injectable data service to connect to the data store, and exchange of data and actions across components.
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+
+## Authorship
+
+MealTracker was created by Zach Swanson on 3/31/17.  
+
+There is no ongoing support planned for MealTracker, but feel free to email questions and comments to zach.j.swanson@gmail.com
+
+Licensed under MIT license
+
+## Installation
+
+MealTracker is generously hosted by the fine folks at Firebase.  You can vist at: https://meal-tracker-ebfd6.firebaseapp.com
+
+To install an instance locally, first clone the repository from git and run the following commands from the project root in the terminal:
+
+npm install
+bower install
+MealTracker requires a connection to a firebase datastore in order to function.  To set up, first create a file at src/app/api-keys.ts with the following contents:
+
+export var masterFirebaseConfig = {
+  apiKey: ,
+    authDomain: ,
+    databaseURL: ,
+    projectId: ,
+    storageBucket: ,
+    messagingSenderId:
+}
+
+Then, create a new firebase project, click on the "add firebase to your web app" button, and paste the values it gives you into the above properties.
+
+You can then run a local instance of the app by using the angular CLI to build and serve the app with the "ng serve" from the project root.
 
 ## Development Process
 
@@ -22,6 +55,10 @@ create list component
 Create add component
 create filter pipe
 create dashboard component
+
+
+
+# Auto-Generated notes from Angular-CLI:
 
 
 ## Development server
