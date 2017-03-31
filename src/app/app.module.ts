@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 
+
 import { AppComponent } from './app.component';
 import { mealService } from './mealService.service'
 

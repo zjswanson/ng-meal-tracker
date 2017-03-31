@@ -8,7 +8,6 @@ import { mealService } from './mealService.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
   meals: Meal[] = [];
 
   constructor(private mealService: mealService) { }
@@ -16,7 +15,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.mealService.getMeals().subscribe(result => {
       this.meals = result;
-      console.log(this.meals);
     });
   }
 }
