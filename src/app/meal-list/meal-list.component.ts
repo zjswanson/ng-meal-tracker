@@ -19,6 +19,7 @@ export class MealListComponent implements OnInit {
   }
 
   sendMealToEdit(meal: Meal) {
+    console.log(meal);
     this.sendEdit.emit(meal);
   }
 

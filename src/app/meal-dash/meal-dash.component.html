@@ -1,7 +1,13 @@
 <div class="well">
   <h2>Today's Meals</h2>
   <div class="edit" *ngIf="mealToEdit">
-    <h4>Edit Meal</h4>
-    
+    <h4>Edit Meal:</h4>
+      <label>Edit Meal Name:</label>
+      <input [(ngModel)]="mealToEdit.name">
+      <label>Edit Notes:</label>
+      <input [(ngModel)]="mealToEdit.notes">
+      <label>Edit Calories:</label>
+      <input [(ngModel)]="mealToEdit.calories">
+      <button type="button" (click)="sendEdit()">Save Edits</button>
   </div>
 </div>

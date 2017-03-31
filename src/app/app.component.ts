@@ -17,7 +17,9 @@ export class AppComponent implements OnInit {
     this.mealService.getMeals().subscribe(result => {
       let mealArray: Meal[] = [];
       result.forEach(function(meal) {
+        console.log(meal.$key);
         let newMeal = new Meal(meal.name, meal.notes, meal.calories);
+        newMeal.$key = meal.$key
         mealArray.push(newMeal);
       });
       this.meals = mealArray;
@@ -30,5 +32,10 @@ export class AppComponent implements OnInit {
 
   openEdit(meal: Meal) {
     this.mealToEdit = meal;
+  }
+
+  saveEdit(meal: Meal) {
+    this.mealService.updateMeal(meal);
+    this.mealToEdit = null;
   }
 }

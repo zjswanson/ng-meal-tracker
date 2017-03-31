@@ -9,12 +9,17 @@ import { Meal } from './../meal-model';
 })
 export class MealDashComponent implements OnInit {
   @Input() meals: any[];
-  @Input() mealToEdit: Meal = null;
-  @Output() sendEdit = new EventEmitter();
+  @Input() mealToEdit = null;
+  @Output() saveEdit = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  sendEdit() {
+    this.saveEdit.emit(this.mealToEdit);
+  }
+
 
 }
