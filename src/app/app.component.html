@@ -8,7 +8,7 @@
       <app-meal-list [meals]="meals"></app-meal-list>
     </div>
     <div class="col-sm-4">
-      <app-meal-add></app-meal-add>
+      <app-meal-add (clickSender)="addMeal($event)"></app-meal-add>
     </div>
   </div>
 </div>

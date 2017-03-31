@@ -14,4 +14,8 @@ export class mealService {
     return this.meals;
   }
 
+  addMeal(newMeal: Meal) {
+    this.meals.push(newMeal);
+  }
+
 }

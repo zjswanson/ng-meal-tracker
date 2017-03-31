@@ -1,3 +1,9 @@
-<p>
-  meal-add works!
-</p>
+<div>
+  <label>Enter Meal Name:</label>
+  <input #mealName>
+  <label>Notes on the meal:</label>
+  <input #mealNotes>
+  <label>Total Calories:</label>
+  <input #mealCalories>
+  <button (click)="addMeal(mealName.value, mealNotes.value, mealCalories.value)">Add Meal</button>
+</div>
