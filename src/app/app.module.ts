@@ -7,7 +7,10 @@ import { AngularFireModule } from 'angularfire2';
 
 
 import { AppComponent } from './app.component';
-import { mealService } from './mealService.service'
+import { mealService } from './mealService.service';
+import { MealListComponent } from './meal-list/meal-list.component';
+import { MealAddComponent } from './meal-add/meal-add.component';
+import { MealDashComponent } from './meal-dash/meal-dash.component'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -18,7 +21,10 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MealListComponent,
+    MealAddComponent,
+    MealDashComponent
   ],
   imports: [
     BrowserModule,
