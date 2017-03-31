@@ -12,9 +12,6 @@ export class MealDashComponent implements OnInit {
   @Input() mealToEdit: Meal = null;
   @Output() sendEdit = new EventEmitter();
 
-
-
-
   constructor() { }
 
   ngOnInit() {

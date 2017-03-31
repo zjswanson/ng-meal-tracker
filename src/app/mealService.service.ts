@@ -18,4 +18,16 @@ export class mealService {
     this.meals.push(newMeal);
   }
 
+  getMealById(mealId: string) {
+    return this.angularFire.database.object('/meals/' + mealId);
+  }
+
+  updateMeal(mealToEdit) {
+    var mealEntryInDatabase = this.getMealById(mealToEdit.$key);
+    mealEntryInDatabase.update({ name: mealToEdit.name,
+                                notes: mealToEdit.notes,
+                                calories: mealToEdit.calories
+                              });
+  }
+
 }
