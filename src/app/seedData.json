@@ -1,0 +1,19 @@
+{
+  "meals": [
+    {
+      "name": "Coffee",
+      "notes": "Probably like a quart of it.  A bunch",
+      "calories": 50
+    },
+    {
+      "name": "Larabar",
+      "notes": "Too small, too sweet.  Still Hungry",
+      "calories": 100
+    },
+    {
+      "name": "Breakfast Burrito",
+      "notes": "When you need to go right back to sleep after breakfast...",
+      "calories": 850
+    }
+  ]
+}

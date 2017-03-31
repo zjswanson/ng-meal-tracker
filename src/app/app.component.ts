@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
   constructor(private mealService: mealService) { }
 
   ngOnInit() {
-    this.mealService.getMeals().subscribe(result => this.meals = result);
-    console.log(this.meals);
+    this.mealService.getMeals().subscribe(result => {
+      this.meals = result;
+      console.log(this.meals);
+    });
   }
 }
