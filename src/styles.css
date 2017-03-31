@@ -9,6 +9,11 @@ button {
   margin: 10px;
 }
 
+.well {
+  background-color: red;
+}
+
+
 .inline {
   display: inline;
 }
@@ -23,4 +28,12 @@ button {
 
 .jumbotron {
   text-align: center;
+  background-image: url('./assets/veggies.jpg');
+  background-position: 0% 70%;
+  background-size: cover;
+}
+
+.white {
+  color: white;
+  text-shadow: 5px 5px black;
 }
